@@ -23,7 +23,7 @@ def drukuj_plansze(pole):
 print(plansza_do_gry)
 print(klawisze_gry)
 
-drukuj_plansze()
+drukuj_plansze(plansza_do_gry)
 
 
 # %%
