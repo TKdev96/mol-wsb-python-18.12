@@ -69,7 +69,7 @@ def gra():
                 print('\nKoniec Gry\n')
                 print(f"Wygrał Gracz: {gracz}!")
                 break
-            elif plansza_do_gry['1'] == plansza_do_gry['5'] == plansza_do_gry['8'] != ' ':
+            elif plansza_do_gry['1'] == plansza_do_gry['5'] == plansza_do_gry['9'] != ' ':
                 drukuj_plansze(plansza_do_gry)
                 print('\nKoniec Gry\n')
                 print(f"Wygrał Gracz: {gracz}!")
