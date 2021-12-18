@@ -19,11 +19,60 @@ def drukuj_plansze(pole):
     print('-+-+-')
     print(f"{pole['1']}|{pole['2']}|{pole['3']}")
 
-
-print(plansza_do_gry)
-print(klawisze_gry)
-
-drukuj_plansze(plansza_do_gry)
-
+def gra():
+    gracz = 'X'
+    licznik = 0
+    for i in range(10):
+        drukuj_plansze(plansza_do_gry)
+        move = input(f'To jest ruch, {gracz}. Wybierz miejsce postawienia znaku!')
+        if plansza_do_gry[move] == " ":
+            plansza_do_gry[move] = gracz
+            licznik += 1
+        else:
+            print("Pole jest już zajęte!\nWstaw swój znak w inne miejsce.")    
+            continue
+        if licznik >= 5:
+            if plansza_do_gry['7'] == plansza_do_gry['8'] == plansza_do_gry['9'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            elif plansza_do_gry['4'] == plansza_do_gry['5'] == plansza_do_gry['6'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            elif plansza_do_gry['1'] == plansza_do_gry['2'] == plansza_do_gry['3'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            #koniec wygranych poziomych
+            elif plansza_do_gry['7'] == plansza_do_gry['4'] == plansza_do_gry['1'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            elif plansza_do_gry['8'] == plansza_do_gry['5'] == plansza_do_gry['2'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            elif plansza_do_gry['9'] == plansza_do_gry['6'] == plansza_do_gry['3'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            #koniec wygranych pionowych
+            elif plansza_do_gry['7'] == plansza_do_gry['5'] == plansza_do_gry['3'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
+            elif plansza_do_gry['1'] == plansza_do_gry['5'] == plansza_do_gry['8'] != ' ':
+                drukuj_plansze(plansza_do_gry)
+                print('\nKoniec Gry\n')
+                print(f"Wygrał Gracz: {gracz}!")
+                break
 
 # %%
